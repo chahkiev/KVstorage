@@ -22,12 +22,6 @@ def correct_body(body):
 def key_exists(key):
     c = Connection("127.0.0.1", 3301)
     print("key_exists()")
-    # try:
-    #     c.select("KVstorage", key)
-    #     print(c.select("KVstorage", key))
-    #     return True
-    # except:
-    #     return False
     exist = list(c.select("KVstorage", key))
     print(exist != [])
     return exist != []
@@ -57,6 +51,7 @@ def get_key(body):
     key = body['key']
     return key
 
+
 def get_value(body):
     body = body.decode("utf-8")
     body = ast.literal_eval(body)
@@ -68,7 +63,7 @@ def get_kv(key):
     c = Connection("127.0.0.1", 3301)
     print("get_kv()")
     print(c.select("KVstorage", key))
-    return c.select("KVstorage", key)
+    return list(c.select("KVstorage", key))
 
 
 def delete_kv(key):
@@ -76,10 +71,6 @@ def delete_kv(key):
     print("delete_kv()")
     c.delete("KVstorage", key)
     return
-
-def main(request):
-    print("I AM MAIN VIEW FUNCTION")
-    return render(request, 'spider/main.html')
 
 
 def kv(request):
@@ -99,8 +90,9 @@ def kv(request):
             return HttpResponse(status=409)
         else:
             add_kv("key777", "value88005553535") # change for KEY and VALUE
+            return HttpResponse("Successfully added")
 
-    return render(request, 'spider/kv.html')
+    # return render(request, 'spider/kv.html')
 
 
 def id(request, id):
@@ -117,19 +109,24 @@ def id(request, id):
             return HttpResponse(status=404)
         else:
             update_value('key1', 'value15') # change to ID nad VALUE
+            return HttpResponse("Successfully updated")
 
 
     elif request.method == 'GET':
-        if not key_exists("key1"): # change for ID
+        if not key_exists(id): # change for ID
             return HttpResponse(status=404)
         else:
-            get_kv("key1") # change for ID
+            get_kv(id) # change for ID
+            print(get_kv(id))
+            # return render(request, 'spider/id.html', {'json': get_kv("key1")})
+            return HttpResponse(get_kv(id))
 
     elif request.method == 'GET':  # change to DELETE
         if not key_exists("key1"):   # change for id
             return HttpResponse(status=404)
         else:
             delete_kv("key1") # change for id
+            return HttpResponse("Successfully deleted")
 
-
-    return render(request, 'spider/id.html')
+    #
+    # return render(request, 'spider/id.html')
