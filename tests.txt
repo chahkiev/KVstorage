@@ -1,0 +1,19 @@
+POST(add key-value):
+requestData = {"key" : "zero", "value" : {"coca-cola": "bar", "aaa" : "bbb"}}
+jsn = json.dumps(requestData)
+r = requests.post('http://localhost:8000/kv/', data  = jsn )
+
+
+PUT(change value):
+// body = b'{"key": "test", "value": {"foooo": "bar"}}'
+requestData = {"key" : "key2", "value" : {"PUUUUUT": "bar", "aaa" : "bbb"}}
+jsn = json.dumps(requestData)
+r = requests.put('http://localhost:8000/kv/key2', data  = jsn )
+
+
+GET(get key-value):
+r = requests.get('http://localhost:8000/kv/key2')
+
+
+DELETE(delete key-value):
+r = requests.delete('http://localhost:8000/kv/key777')

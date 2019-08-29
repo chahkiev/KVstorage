@@ -33,6 +33,7 @@ def correct_body(body):
         print(data['key'])
         print(data['value'])
     except:
+        print("False")
         return False
 
     print('key' in data and 'value' in data)
@@ -124,7 +125,7 @@ def kv(request):
     body = request.body
 
     if not correct_body(body):
-        print('Parse ERROR')
+        print('Parse ERROR POST')
         return HttpResponse(status=400)
 
     if request.method == 'POST':  # change to POST
@@ -143,37 +144,39 @@ def kv(request):
 
 @csrf_exempt
 def id(request, id):
+    key = id
     print('ID KEY-VALUE')
     print(request.method)
-    body = b'{"key": "test", "value": {"foo": "bar"}}'
-    # body = request.body
+    # body = b'{"key": "test", "value": {"foooo": "bar"}}'
+    body = request.body
 
     if request.method == 'PUT':   # change to PUT
         if not correct_body(body):
             print('Parse ERROR PUT')
             return HttpResponse(status=400)
-        if not key_exists("key1"): # change to KEY
+        if not key_exists(id): # change to KEY
             return HttpResponse(status=404)
         else:
-            update_value('key1', 'value15') # change to ID nad VALUE
+            value = get_value(body)
+            update_value(key, value) # change to ID nad VALUE
             return HttpResponse("Successfully updated")
 
 
     elif request.method == 'GET':
-        if not key_exists(id): # change for ID
-            return HttpResponse(status=404)
-        else:
-            get_kv(id) # change for ID
-            print(get_kv(id))
-            # return render(request, 'spider/id.html', {'json': get_kv("key1")})
-            return HttpResponse(get_kv(id))
 
-    elif request.method == 'DELETE':  # change to DELETE
-        if not key_exists("key1"):   # change for id
+        if not key_exists(key):
             return HttpResponse(status=404)
         else:
-            delete_kv("key1") # change for id
+            get_kv(key)
+            print(get_kv(key))
+            # return render(request, 'spider/id.html', {'json': get_kv("key1")})
+            return HttpResponse(get_kv(key))
+
+    elif request.method == 'DELETE':
+        if not key_exists(key):
+            return HttpResponse(status=404)
+        else:
+            delete_kv(key)
             return HttpResponse("Successfully deleted")
 
-    #
     # return render(request, 'spider/id.html')
