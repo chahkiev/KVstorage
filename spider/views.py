@@ -9,31 +9,18 @@ from django.http import HttpResponse
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 
-# requestData = {"key" : "test", "value" : {"foo": "bar", "aaa" : "bbb"}}
-# jsn = json.dumps(requestData)
-# r = requests.post('http://localhost:8000/kv/', data  = jsn )
-
 
 def correct_body(body):
     print(body)
     logger("correct_body()", body)
     try:
-        # print(body.json())
         body = body.decode("utf-8")
         data = ast.literal_eval(body)
-        # print(body.split("&"))
-        # data = {}
-        # body = body.split("&")
-        # for i in body:
-        #     # print(i)
-        #     tmp = i.split("=")
-        #     data[tmp[0]] = tmp[1]
 
         print(data)
         print(data['key'])
         print(data['value'])
     except:
-        print("False")
         return False
 
     print('key' in data and 'value' in data)
@@ -128,18 +115,16 @@ def kv(request):
         print('Parse ERROR POST')
         return HttpResponse(status=400)
 
-    if request.method == 'POST':  # change to POST
+    if request.method == 'POST':
         key = get_key(body)
         print("key = ", key)
         value = get_value(body)
         print(key, "--", value)
-        if key_exists(key):  # change for KEY
+        if key_exists(key):
             return HttpResponse(status=409)
         else:
-            add_kv(key, value) # change for KEY and VALUE
+            add_kv(key, value)
             return HttpResponse("Successfully added")
-
-    # return render(request, 'spider/kv.html')
 
 
 @csrf_exempt
@@ -150,26 +135,23 @@ def id(request, id):
     # body = b'{"key": "test", "value": {"foooo": "bar"}}'
     body = request.body
 
-    if request.method == 'PUT':   # change to PUT
+    if request.method == 'PUT':
         if not correct_body(body):
             print('Parse ERROR PUT')
             return HttpResponse(status=400)
-        if not key_exists(id): # change to KEY
+        if not key_exists(key):
             return HttpResponse(status=404)
         else:
             value = get_value(body)
-            update_value(key, value) # change to ID nad VALUE
+            update_value(key, value)
             return HttpResponse("Successfully updated")
 
-
     elif request.method == 'GET':
-
         if not key_exists(key):
             return HttpResponse(status=404)
         else:
             get_kv(key)
             print(get_kv(key))
-            # return render(request, 'spider/id.html', {'json': get_kv("key1")})
             return HttpResponse(get_kv(key))
 
     elif request.method == 'DELETE':
@@ -178,5 +160,3 @@ def id(request, id):
         else:
             delete_kv(key)
             return HttpResponse("Successfully deleted")
-
-    # return render(request, 'spider/id.html')

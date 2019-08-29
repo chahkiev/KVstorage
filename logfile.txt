@@ -249,3 +249,31 @@
 2019-08-29  17:19:42 : get_kv()    key2
 2019-08-29  17:20:06 : key_exists()    key777
 2019-08-29  17:20:06 : delete_kv()    key777
+2019-08-29  17:37:21 : correct_body()    b''
+2019-08-29  17:40:08 : correct_body()    b''
+2019-08-29  17:43:53 : correct_body()    b''
+2019-08-29  17:45:58 : correct_body()    b''
+2019-08-29  17:46:21 : correct_body()    b''
+2019-08-29  17:52:36 : correct_body()    b''
+2019-08-29  17:52:45 : correct_body()    b''
+2019-08-29  18:03:01 : correct_body()    b''
+2019-08-29  18:03:27 : correct_body()    b''
+2019-08-29  18:03:47 : correct_body()    b''
+2019-08-29  18:04:54 : correct_body()    b''
+2019-08-29  18:07:00 : correct_body()    b''
+2019-08-29  18:08:35 : correct_body()    b''
+2019-08-29  18:10:13 : correct_body()    b''
+2019-08-29  18:11:44 : correct_body()    b''
+2019-08-29  18:13:12 : correct_body()    b''
+2019-08-29  18:13:52 : correct_body()    b''
+2019-08-29  18:15:22 : correct_body()    b''
+2019-08-29  18:19:22 : correct_body()    b''
+2019-08-29  18:21:56 : correct_body()    b''
+2019-08-29  18:23:59 : correct_body()    b'{"key": "key2", "value": {"PUUUUUT": "bar", "aaa": "bbb"}}'
+2019-08-29  18:23:59 : key_exists()    key2
+2019-08-29  18:23:59 : get_body()    b'{"key": "key2", "value": {"PUUUUUT": "bar", "aaa": "bbb"}}'
+2019-08-29  18:23:59 : update_value    key2 {'PUUUUUT': 'bar', 'aaa': 'bbb'}
+2019-08-29  18:31:43 : correct_body()    b'{"key": "key2", "value": {"PUUUUUT": "bar", "aaa": "bbb"}}'
+2019-08-29  18:31:43 : key_exists()    key2
+2019-08-29  18:31:43 : get_body()    b'{"key": "key2", "value": {"PUUUUUT": "bar", "aaa": "bbb"}}'
+2019-08-29  18:31:43 : update_value    key2 {'PUUUUUT': 'bar', 'aaa': 'bbb'}
