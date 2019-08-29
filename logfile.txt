@@ -6,3 +6,190 @@
 2019-08-29  14:59:59 : get_key()    b'{"key": "test", "value": {"foo": "bar"}}'
 2019-08-29  14:59:59 : get_body()    b'{"key": "test", "value": {"foo": "bar"}}'
 2019-08-29  14:59:59 : key_exists()    key777
+2019-08-29  15:10:41 : correct_body()    b''
+2019-08-29  15:11:48 : correct_body()    b''
+2019-08-29  15:12:08 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:13:10 : correct_body()    b'{"key": "test", "value": {"foo": "bar"}}'
+2019-08-29  15:13:10 : key_exists()    key1
+2019-08-29  15:13:10 : update_value    key1 value15
+2019-08-29  15:13:41 : key_exists()    key1
+2019-08-29  15:13:41 : get_kv()    key1
+2019-08-29  15:13:41 : get_kv()    key1
+2019-08-29  15:13:41 : get_kv()    key1
+2019-08-29  15:15:23 : key_exists()    key1
+2019-08-29  15:15:23 : delete_kv()    key1
+2019-08-29  15:15:53 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:18:35 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:19:11 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:19:11 : get_key()    b'key=test&value=foo'
+2019-08-29  15:19:32 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:19:32 : get_key()    b'key=test&value=foo'
+2019-08-29  15:19:57 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:19:57 : get_key()    b'key=test&value=foo'
+2019-08-29  15:22:46 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:22:46 : get_key()    b'key=test&value=foo'
+2019-08-29  15:24:54 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:24:54 : get_key()    b'key=test&value=foo'
+2019-08-29  15:27:08 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:27:08 : get_key()    b'key=test&value=foo'
+2019-08-29  15:28:17 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:28:17 : get_key()    b'key=test&value=foo'
+2019-08-29  15:29:32 : get_key()    b'key=test&value=foo'
+2019-08-29  15:53:15 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:53:15 : get_key()    b'key=test&value=foo'
+2019-08-29  15:54:02 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:54:02 : get_key()    b'key=test&value=foo'
+2019-08-29  15:54:19 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:54:19 : get_key()    b'key=test&value=foo'
+2019-08-29  15:55:15 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:55:15 : get_key()    b'key=test&value=foo'
+2019-08-29  15:55:33 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:55:33 : get_key()    b'key=test&value=foo'
+2019-08-29  15:55:47 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:55:47 : get_key()    b'key=test&value=foo'
+2019-08-29  15:56:02 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:56:02 : get_key()    b'key=test&value=foo'
+2019-08-29  15:56:36 : correct_body()    b'key=test&value=foo'
+2019-08-29  15:56:36 : get_key()    b'key=test&value=foo'
+2019-08-29  15:56:36 : get_body()    b'key=test&value=foo'
+2019-08-29  15:56:36 : key_exists()    test
+2019-08-29  15:56:36 : add_kv()    key228 value1488
+2019-08-29  15:57:42 : correct_body()    b'key=test&value1=foo'
+2019-08-29  15:57:42 : get_key()    b'key=test&value1=foo'
+2019-08-29  15:57:42 : get_body()    b'key=test&value1=foo'
+2019-08-29  16:00:17 : correct_body()    b'key=test&value1=foo'
+2019-08-29  16:00:36 : correct_body()    b'key=test&value=foo'
+2019-08-29  16:00:36 : get_key()    b'key=test&value=foo'
+2019-08-29  16:00:36 : get_body()    b'key=test&value=foo'
+2019-08-29  16:00:36 : key_exists()    test
+2019-08-29  16:00:36 : add_kv()    key228 value1488
+2019-08-29  16:00:43 : correct_body()    b'key=test&value1=foo'
+2019-08-29  16:01:51 : correct_body()    b'key=test&value1=foo&value1=aaa'
+2019-08-29  16:01:58 : correct_body()    b'key=test&value=foo&value=aaa'
+2019-08-29  16:01:58 : get_key()    b'key=test&value=foo&value=aaa'
+2019-08-29  16:01:58 : get_body()    b'key=test&value=foo&value=aaa'
+2019-08-29  16:01:58 : key_exists()    test
+2019-08-29  16:01:58 : add_kv()    key228 value1488
+2019-08-29  16:03:39 : correct_body()    b'key=test&value=foo&value=aaa'
+2019-08-29  16:04:57 : correct_body()    b'key=test&value=foo&value=aaa'
+2019-08-29  16:10:08 : correct_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:17:46 : correct_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:18:18 : correct_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:18:32 : correct_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:19:11 : correct_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:19:11 : get_key()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:20:10 : correct_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:20:10 : get_key()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:20:10 : get_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:20:10 : key_exists()    test
+2019-08-29  16:20:10 : add_kv()    key228 value1488
+2019-08-29  16:20:26 : correct_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:20:26 : get_key()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:20:26 : get_body()    b'{"key": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:20:26 : key_exists()    test
+2019-08-29  16:20:27 : add_kv()    key228 value1488
+2019-08-29  16:21:32 : correct_body()    b'{"key1010": "test", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:22:16 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:22:16 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:22:16 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:22:16 : key_exists()    test0000
+2019-08-29  16:22:16 : add_kv()    key228 value1488
+2019-08-29  16:24:15 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:24:15 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:24:15 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:24:15 : key_exists()    test0000
+2019-08-29  16:25:33 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:25:33 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:25:33 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:25:33 : key_exists()    test0000
+2019-08-29  16:26:38 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:26:38 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:26:38 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:26:38 : key_exists()    test0000
+2019-08-29  16:27:16 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:27:16 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:27:16 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:27:16 : key_exists()    test0000
+2019-08-29  16:27:29 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:27:29 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:27:29 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:27:29 : key_exists()    test0000
+2019-08-29  16:28:02 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:02 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:02 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:02 : key_exists()    test0000
+2019-08-29  16:28:28 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:28 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:28 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:28 : key_exists()    test0000
+2019-08-29  16:28:56 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:56 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:56 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:28:56 : key_exists()    test0000
+2019-08-29  16:29:11 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:29:11 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:29:11 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:29:11 : key_exists()    test0000
+2019-08-29  16:29:40 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:29:40 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:29:40 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:29:40 : key_exists()    test0000
+2019-08-29  16:30:01 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:01 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:01 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:01 : key_exists()    test0000
+2019-08-29  16:30:27 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:27 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:27 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:27 : key_exists()    test0000
+2019-08-29  16:30:57 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:57 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:57 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:30:57 : key_exists()    test0000
+2019-08-29  16:31:38 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:31:38 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:31:38 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:31:38 : key_exists()    test0000
+2019-08-29  16:32:08 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:08 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:08 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:08 : key_exists()    test0000
+2019-08-29  16:32:35 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:35 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:35 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:35 : key_exists()    test0000
+2019-08-29  16:32:52 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:52 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:52 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:32:52 : key_exists()    test0000
+2019-08-29  16:32:52 : add_kv()    test0000
+2019-08-29  16:33:52 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:33:52 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:33:52 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:33:52 : key_exists()    test0000
+2019-08-29  16:33:52 : add_kv()    test0000
+2019-08-29  16:34:07 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:34:07 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:34:07 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:34:07 : key_exists()    test0000
+2019-08-29  16:34:07 : add_kv()    test0000
+2019-08-29  16:34:49 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:34:49 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:34:49 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:34:49 : key_exists()    test0000
+2019-08-29  16:34:49 : add_kv()    test0000 {'foo': 'bar', 'aaa': 'bbb'}
+2019-08-29  16:37:04 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:37:04 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:37:04 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:37:04 : key_exists()    test0000
+2019-08-29  16:37:04 : add_kv()    test0000 {'foo': 'bar', 'aaa': 'bbb'}
+2019-08-29  16:38:18 : correct_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:38:18 : get_key()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:38:18 : get_body()    b'{"key": "test0000", "value": {"foo": "bar", "aaa": "bbb"}}'
+2019-08-29  16:38:18 : key_exists()    test0000
+2019-08-29  16:38:18 : add_kv()    test0000 {'foo': 'bar', 'aaa': 'bbb'}
+2019-08-29  16:45:36 : correct_body()    b'{"key": "zero", "value": {"coca-cola": "bar", "aaa": "bbb"}}'
+2019-08-29  16:45:36 : get_key()    b'{"key": "zero", "value": {"coca-cola": "bar", "aaa": "bbb"}}'
+2019-08-29  16:45:36 : get_body()    b'{"key": "zero", "value": {"coca-cola": "bar", "aaa": "bbb"}}'
+2019-08-29  16:45:36 : key_exists()    zero
+2019-08-29  16:45:36 : add_kv()    zero {'coca-cola': 'bar', 'aaa': 'bbb'}
