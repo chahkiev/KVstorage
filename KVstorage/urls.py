@@ -19,6 +19,5 @@ from django.conf.urls import url, include
 from django.conf import settings
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url(r'^', include('spider.urls'), name="spider"),
 ]

@@ -51,3 +51,56 @@
 2019-08-30  15:53:06 : update_value    six_eyed {'men': '2', 'women': '4'}
 2019-08-30  15:53:06 : key_exists()    six_eyed
 2019-08-30  15:53:06 : delete_kv()    six_eyed
+2019-08-30  16:49:36 : key_exists()    non_existent_key
+2019-08-30  16:49:36 : correct_body()    b'{"key": "pouch", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_key()    b'{"key": "pouch", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_body()    b'{"key": "pouch", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : key_exists()    pouch
+2019-08-30  16:49:36 : add_kv()    pouch {'mail': 'ru', 'group': 'company'}
+2019-08-30  16:49:36 : key_exists()    pouch
+2019-08-30  16:49:36 : delete_kv()    pouch
+2019-08-30  16:49:36 : key_exists()    non_existent_key
+2019-08-30  16:49:36 : correct_body()    b'{"key": "vagrant", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_key()    b'{"key": "vagrant", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_body()    b'{"key": "vagrant", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : key_exists()    vagrant
+2019-08-30  16:49:36 : add_kv()    vagrant {'mail': 'ru', 'group': 'company'}
+2019-08-30  16:49:36 : key_exists()    vagrant
+2019-08-30  16:49:36 : get_kv()    vagrant
+2019-08-30  16:49:36 : get_kv()    vagrant
+2019-08-30  16:49:36 : get_kv()    vagrant
+2019-08-30  16:49:36 : key_exists()    vagrant
+2019-08-30  16:49:36 : delete_kv()    vagrant
+2019-08-30  16:49:36 : correct_body()    b'{"key": "hermit", "bad_value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : correct_body()    b'{"key": "robber", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_key()    b'{"key": "robber", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_body()    b'{"key": "robber", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : key_exists()    robber
+2019-08-30  16:49:36 : add_kv()    robber {'mail': 'ru', 'group': 'company'}
+2019-08-30  16:49:36 : correct_body()    b'{"key": "robber", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_key()    b'{"key": "robber", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_body()    b'{"key": "robber", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : key_exists()    robber
+2019-08-30  16:49:36 : key_exists()    robber
+2019-08-30  16:49:36 : delete_kv()    robber
+2019-08-30  16:49:36 : correct_body()    b'{"key": "black_widow", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_key()    b'{"key": "black_widow", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_body()    b'{"key": "black_widow", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : key_exists()    black_widow
+2019-08-30  16:49:36 : add_kv()    black_widow {'mail': 'ru', 'group': 'company'}
+2019-08-30  16:49:36 : key_exists()    black_widow
+2019-08-30  16:49:36 : delete_kv()    black_widow
+2019-08-30  16:49:36 : correct_body_PUT()    b'{"bad_value": {"men": "2", "women": "4"}}'
+2019-08-30  16:49:36 : correct_body_PUT()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  16:49:36 : key_exists()    non_existent_key
+2019-08-30  16:49:36 : correct_body()    b'{"key": "six_eyed", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_key()    b'{"key": "six_eyed", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : get_body()    b'{"key": "six_eyed", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  16:49:36 : key_exists()    six_eyed
+2019-08-30  16:49:36 : add_kv()    six_eyed {'mail': 'ru', 'group': 'company'}
+2019-08-30  16:49:36 : correct_body_PUT()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  16:49:36 : key_exists()    six_eyed
+2019-08-30  16:49:36 : get_body()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  16:49:36 : update_value    six_eyed {'men': '2', 'women': '4'}
+2019-08-30  16:49:36 : key_exists()    six_eyed
+2019-08-30  16:49:36 : delete_kv()    six_eyed
