@@ -1,5 +1,17 @@
-box.cfg{listen = 3301}
-s = box.schema.space.create('KVstorage')
-s:format({  {name = 'key', type = 'string'}, {name = 'value', type = 'string'}  })
-s:create_index('primary', { type = 'hash', parts = {'key'}   })
-box.schema.user.grant('guest', 'read,write,execute', 'universe')
+Creating database:
+$ box.cfg{listen = 3301}
+tarantool> s = box.schema.space.create('KVstorage')
+tarantool> s:format({  {name = 'key', type = 'string'}, {name = 'value', type = 'string'}  })
+tarantool> s:create_index('primary', { type = 'hash', parts = {'key'}   })
+tarantool> box.schema.user.grant('guest', 'read,write,execute', 'universe')
+
+Connecting to database:
+$ lsof -i :3301
+$ tarantoolctl connect '3301'
+
+Some functions (after connecting):
+localhost:3301> box.space.KVstorage:select{} - view an entire database
+localhost:3301> box.space.KVstorage:select{'<key>'} - find record by key
+localhost:3301> box.space.KVstorage:insert{'<key>', '<value>'} - delete record by key
+localhost:3301> box.space.KVstorage:update( {'<key>'}, {{'=', 2, '<new_value>'}} ) - update value by key
+localhost:3301> box.space.KVstorage:delete{'<key>'} - delete record by key
