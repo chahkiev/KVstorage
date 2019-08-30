@@ -55,11 +55,11 @@ $ sudo apt-get -y install tarantool
 
 ```bash
 $ tarantool
-> box.cfg{listen = 3301}
-> s = box.schema.space.create('KVstorage')
-> s:format({  {name = 'key', type = 'string'}, {name = 'value', type = 'string'}  })
-> s:create_index('primary', { type = 'hash', parts = {'key'}   })
-> box.schema.user.grant('guest', 'read,write,execute', 'universe')
+tarantool> box.cfg{listen = 3301}
+tarantool> s = box.schema.space.create('KVstorage')
+tarantool> s:format({  {name = 'key', type = 'string'}, {name = 'value', type = 'string'}  })
+tarantool> s:create_index('primary', { type = 'hash', parts = {'key'}   })
+tarantool> box.schema.user.grant('guest', 'read,write,execute', 'universe')
 ```
 
 Django app:
