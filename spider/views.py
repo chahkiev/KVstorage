@@ -124,7 +124,6 @@ def logger(func, value):
 def kv(request):
     print('JUST KEY-VALUE')
     print(request.body)
-    # body = b'{"key": "test", "value": {"foo": "bar"}}'
     body = request.body
 
     if not correct_body(body):
@@ -148,7 +147,6 @@ def id(request, id):
     key = id
     print('ID KEY-VALUE')
     print(request.method)
-    # body = b'{"key": "test", "value": {"foooo": "bar"}}'
     body = request.body
 
     if request.method == 'PUT':
