@@ -29,6 +29,22 @@ def correct_body(body):
     # return True
 
 
+def correct_body_PUT(body):
+    print(body)
+    logger("correct_body_PUT()", body)
+    try:
+        body = body.decode("utf-8")
+        data = ast.literal_eval(body)
+
+        print(data)
+        print(data['value'])
+    except:
+        return False
+
+    print('value' in data)
+    return 'value' in data
+
+
 def key_exists(key):
     logger("key_exists()", key)
     c = Connection("127.0.0.1", 3301)
@@ -136,7 +152,7 @@ def id(request, id):
     body = request.body
 
     if request.method == 'PUT':
-        if not correct_body(body):
+        if not correct_body_PUT(body):
             print('Parse ERROR PUT')
             return HttpResponse(status=400)
         if not key_exists(key):

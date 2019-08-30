@@ -6,8 +6,8 @@ r = requests.post(url, data  = jsn )
 
 
 PUT(change value):
-url = 'http://localhost:8000/kv/key2'
-requestData = {"key" : "key2", "value" : {"PUUUUUT": "bar", "aaa" : "bbb"}}
+url = 'http://localhost:8000/kv/key2/'
+requestData = {"value" : {"PUUUUUT": "bar", "aaa" : "bbb"}}
 jsn = json.dumps(requestData)
 r = requests.put(url, data  = jsn )
 

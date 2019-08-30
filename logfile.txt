@@ -277,3 +277,154 @@
 2019-08-29  18:31:43 : key_exists()    key2
 2019-08-29  18:31:43 : get_body()    b'{"key": "key2", "value": {"PUUUUUT": "bar", "aaa": "bbb"}}'
 2019-08-29  18:31:43 : update_value    key2 {'PUUUUUT': 'bar', 'aaa': 'bbb'}
+2019-08-30  08:09:29 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  08:09:29 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  08:09:29 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  08:09:29 : key_exists()    tarantul
+2019-08-30  08:09:29 : add_kv()    tarantul {'mail': 'ru', 'group': 'company'}
+2019-08-30  08:14:31 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  08:14:31 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  08:14:31 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  08:14:31 : key_exists()    tarantul
+2019-08-30  08:14:31 : add_kv()    tarantul {'mail': 'ru', 'group': 'company'}
+2019-08-30  14:55:37 : correct_body()    b'{"key": "tarantul", "bad_value": {"mail": "ru", "group": "company"}}'
+2019-08-30  14:56:32 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  14:56:32 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  14:56:32 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  14:56:32 : key_exists()    tarantul
+2019-08-30  14:57:06 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  14:57:06 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  14:57:06 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  14:57:06 : key_exists()    tarantul
+2019-08-30  14:59:25 : correct_body()    b''
+2019-08-30  14:59:59 : correct_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  14:59:59 : key_exists()    key2
+2019-08-30  14:59:59 : get_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  14:59:59 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:00:36 : correct_body()    b'{"key": "tarantul", "bad_value": {"men": "2", "women": "4"}}'
+2019-08-30  15:00:36 : correct_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:00:36 : key_exists()    key2
+2019-08-30  15:00:36 : get_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:00:36 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:01:53 : correct_body()    b'{"key": "tarantul", "bad_value": {"men": "2", "women": "4"}}'
+2019-08-30  15:01:53 : correct_body()    b'{"key": "non_existent_key", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:01:53 : key_exists()    key2
+2019-08-30  15:01:53 : get_body()    b'{"key": "non_existent_key", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:01:53 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:01:53 : correct_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:01:53 : key_exists()    key2
+2019-08-30  15:01:53 : get_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:01:53 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:02:24 : correct_body()    b'{"key": "tarantul", "bad_value": {"men": "2", "women": "4"}}'
+2019-08-30  15:02:24 : correct_body()    b'{"key": "non_existent_key", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:02:24 : key_exists()    key2
+2019-08-30  15:02:24 : get_body()    b'{"key": "non_existent_key", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:02:24 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:02:24 : correct_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:02:24 : key_exists()    key2
+2019-08-30  15:02:24 : get_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:02:24 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:03:17 : correct_body()    b'{"key": "tarantul", "bad_value": {"men": "2", "women": "4"}}'
+2019-08-30  15:03:17 : correct_body()    b'{"key": "non_existent_key", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:03:17 : key_exists()    key2
+2019-08-30  15:03:17 : get_body()    b'{"key": "non_existent_key", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:03:17 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:03:17 : correct_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:03:17 : key_exists()    key2
+2019-08-30  15:03:17 : get_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:03:17 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:05:41 : correct_body()    b'{"key": "tarantul", "bad_value": {"men": "2", "women": "4"}}'
+2019-08-30  15:05:41 : correct_body()    b'{"key": "non_existent_key", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:05:41 : key_exists()    non_existent_key
+2019-08-30  15:05:41 : correct_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:05:41 : key_exists()    key2
+2019-08-30  15:05:41 : get_body()    b'{"key": "tarantul", "value": {"men": "2", "women": "4"}}'
+2019-08-30  15:05:41 : update_value    key2 {'men': '2', 'women': '4'}
+2019-08-30  15:09:01 : key_exists()    tarantul
+2019-08-30  15:09:01 : get_kv()    tarantul
+2019-08-30  15:09:01 : get_kv()    tarantul
+2019-08-30  15:09:01 : get_kv()    tarantul
+2019-08-30  15:09:01 : key_exists()    non_existent_key
+2019-08-30  15:09:23 : key_exists()    non_existent_key
+2019-08-30  15:09:23 : key_exists()    tarantul
+2019-08-30  15:09:23 : get_kv()    tarantul
+2019-08-30  15:09:23 : get_kv()    tarantul
+2019-08-30  15:09:23 : get_kv()    tarantul
+2019-08-30  15:10:30 : key_exists()    non_existent_key
+2019-08-30  15:10:30 : key_exists()    tarantul
+2019-08-30  15:10:30 : delete_kv()    tarantul
+2019-08-30  15:13:51 : key_exists()    non_existent_key
+2019-08-30  15:13:51 : key_exists()    tarantul
+2019-08-30  15:13:51 : key_exists()    non_existent_key
+2019-08-30  15:13:51 : key_exists()    tarantul
+2019-08-30  15:13:51 : correct_body()    b'{"key": "tarantul", "bad_value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:13:51 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:13:51 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:13:51 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:13:51 : key_exists()    tarantul
+2019-08-30  15:13:51 : add_kv()    tarantul {'mail': 'ru', 'group': 'company'}
+2019-08-30  15:13:51 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:13:51 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:13:51 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:13:51 : key_exists()    tarantul
+2019-08-30  15:13:51 : correct_body_PUT()    b'{"bad_value": {"men": "2", "women": "4"}}'
+2019-08-30  15:13:51 : correct_body_PUT()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  15:13:51 : key_exists()    non_existent_key
+2019-08-30  15:13:51 : correct_body_PUT()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  15:13:51 : key_exists()    tarantul
+2019-08-30  15:13:51 : get_body()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  15:13:51 : update_value    tarantul {'men': '2', 'women': '4'}
+2019-08-30  15:15:27 : correct_body()    b'{"key": "tarantul", "bad_value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:15:27 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:15:27 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:15:27 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:15:27 : key_exists()    tarantul
+2019-08-30  15:15:27 : add_kv()    tarantul {'mail': 'ru', 'group': 'company'}
+2019-08-30  15:15:27 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:15:27 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:15:27 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:15:27 : key_exists()    tarantul
+2019-08-30  15:16:34 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:16:34 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:16:34 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:16:34 : key_exists()    tarantul
+2019-08-30  15:16:34 : add_kv()    tarantul {'mail': 'ru', 'group': 'company'}
+2019-08-30  15:16:43 : correct_body()    b'{"key": "tarantul", "bad_value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:16:54 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:16:54 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:16:54 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:16:54 : key_exists()    tarantul
+2019-08-30  15:17:28 : correct_body()    b'{"key": "tarantul", "bad_value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:17:28 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:17:28 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:17:28 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:17:28 : key_exists()    tarantul
+2019-08-30  15:17:28 : add_kv()    tarantul {'mail': 'ru', 'group': 'company'}
+2019-08-30  15:17:28 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:17:28 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:17:28 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:17:28 : key_exists()    tarantul
+2019-08-30  15:18:09 : correct_body()    b'{"key": "tarantul", "bad_value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:18:09 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:18:09 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:18:09 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:18:09 : key_exists()    tarantul
+2019-08-30  15:18:09 : correct_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:18:09 : get_key()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:18:09 : get_body()    b'{"key": "tarantul", "value": {"mail": "ru", "group": "company"}}'
+2019-08-30  15:18:09 : key_exists()    tarantul
+2019-08-30  15:18:51 : correct_body_PUT()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  15:18:51 : key_exists()    tarantul
+2019-08-30  15:18:51 : get_body()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  15:18:51 : update_value    tarantul {'men': '2', 'women': '4'}
+2019-08-30  15:19:00 : correct_body_PUT()    b'{"bad_value": {"men": "2", "women": "4"}}'
+2019-08-30  15:19:08 : correct_body_PUT()    b'{"value": {"men": "2", "women": "4"}}'
+2019-08-30  15:19:08 : key_exists()    non_existent_key
+2019-08-30  15:19:22 : key_exists()    tarantul
+2019-08-30  15:19:22 : get_kv()    tarantul
+2019-08-30  15:19:22 : get_kv()    tarantul
+2019-08-30  15:19:22 : get_kv()    tarantul
+2019-08-30  15:19:30 : key_exists()    non_existent_key
+2019-08-30  15:19:40 : key_exists()    non_existent_key
+2019-08-30  15:19:48 : key_exists()    tarantul
+2019-08-30  15:19:48 : delete_kv()    tarantul
