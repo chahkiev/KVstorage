@@ -70,8 +70,9 @@ $ git clone https://github.com/chahkiev/KVstorage.git
 $ cd KVstorage/
 $ python3 -mvenv venv
 $ source venv/bin/activate
-$ pip3 install django
 $ pip3 install -r requirements.txt
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
 $ python3 manage.py runserver
 ```
 
