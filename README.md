@@ -76,6 +76,16 @@ $ python3 manage.py migrate
 $ python3 manage.py runserver
 ```
 
+#### OR
+
+```bash
+$ cd ~
+$ git clone https://github.com/chahkiev/KVstorage.git
+$ cd KVstorage/deploy
+$ bash ./createDB.sh
+$ bash ./runApp.sh
+```
+
 ## Testing
 
 ```bash
